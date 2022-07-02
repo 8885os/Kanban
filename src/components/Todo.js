@@ -19,7 +19,7 @@ const Todo = ({ tasks, onDelete, onDrop }) => {
         collect: (monitor) => ({
             isOver: monitor.isOver(),
         })
-    }))
+    }), [todo])
 
     return (
         <td ref={drop} style={{ backgroundColor: isOver ? 'rgb(220,220,220)' : '' }}>

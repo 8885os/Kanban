@@ -18,7 +18,7 @@ const Complete = ({ tasks, onDelete, onDrop }) => {
         collect: (monitor) => ({
             isOver: monitor.isOver(),
         })
-    }))
+    }), [todone])
 
 
     return (

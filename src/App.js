@@ -1,14 +1,11 @@
 import Header from "./components/Header";
 import Table from "./components/Table";
 import AddTask from "./components/AddTask";
-import { createContext, useState } from 'react';
+import { useState } from 'react';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { v4 as uuidv4 } from 'uuid';
 
-export const context = createContext([
-
-])
 
 
 function App() {
@@ -37,11 +34,15 @@ function App() {
     //Add Task
     const newTask = (text) => {
         const id = uuidv4();
-        var specify = 'todo'
-        const makeTask = { id, ...text, specify }
-        setTasks([...tasks, makeTask])
+        const specify = 'todo';
+        const makeTask = { id, ...text, specify };
+        setTasks((tasks) => {
+            return [...tasks, makeTask]
+        });
 
     }
+
+
     //Delete Task
     const deleteTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))
@@ -49,7 +50,7 @@ function App() {
 
 
     return (
-        <div className="newbody" >
+        <div className="App" >
             <DndProvider backend={HTML5Backend}>
                 <div className="container">
                     <Header />

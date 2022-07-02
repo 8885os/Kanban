@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 const AddTask = ({ onAdd }) => {
     const [text, setTask] = useState('')
-
     const onClick = (e) => {
         if (!text) {
             alert('Add a task')

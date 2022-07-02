@@ -6,9 +6,6 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { v4 as uuidv4 } from 'uuid';
 
-export const context = createContext([
-
-])
 
 
 function App() {

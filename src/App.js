@@ -1,10 +1,14 @@
 import Header from "./components/Header";
 import Table from "./components/Table";
 import AddTask from "./components/AddTask";
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { v4 as uuidv4 } from 'uuid';
 
+export const context = createContext([
+
+])
 
 
 function App() {
@@ -12,18 +16,18 @@ function App() {
     const [tasks, setTasks] = useState([
 
         {
-            id: 1,
+            id: uuidv4(),
             text: 'Meeting at place',
             specify: 'todo',
         },
         {
-            id: 2,
+            id: uuidv4(),
             text: 'Shopping',
             specify: 'inprogress',
 
         },
         {
-            id: 3,
+            id: uuidv4(),
             text: 'Appointment',
             specify: 'complete',
 
@@ -32,7 +36,7 @@ function App() {
 
     //Add Task
     const newTask = (text) => {
-        const id = Math.floor(Math.random() * 10000) + 1;
+        const id = uuidv4();
         var specify = 'todo'
         const makeTask = { id, ...text, specify }
         setTasks([...tasks, makeTask])
@@ -49,13 +53,14 @@ function App() {
             <DndProvider backend={HTML5Backend}>
                 <div className="container">
                     <Header />
-                    <Table tasks={tasks} onDelete={deleteTask} />
+                    <Table tasks={tasks} onDelete={deleteTask} onDrop={setTasks} />
                 </div>
                 <div>
                     <AddTask tasks={tasks} onAdd={newTask} />
                 </div>
-            </DndProvider>
+            </DndProvider >
         </div>
+
     );
 }
 

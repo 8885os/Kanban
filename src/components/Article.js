@@ -19,9 +19,7 @@ const Article = ({ task, specify, onDelete }) => {
                     {task.text} <CgRemove className='remove' style={{ color: 'red', cursor: 'pointer' }} onClick={() => onDelete(task.id)} />
                 </p>
             </div>
-
         </article>
     )
 }
-
 export default Article

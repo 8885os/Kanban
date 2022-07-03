@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Kanban/static/css/main.e6da8dc5.css",
-    "main.js": "/Kanban/static/js/main.41abaf6a.js",
-    "static/js/787.5d7b65c0.chunk.js": "/Kanban/static/js/787.5d7b65c0.chunk.js",
-    "index.html": "/Kanban/index.html",
-    "main.e6da8dc5.css.map": "/Kanban/static/css/main.e6da8dc5.css.map",
-    "main.41abaf6a.js.map": "/Kanban/static/js/main.41abaf6a.js.map",
-    "787.5d7b65c0.chunk.js.map": "/Kanban/static/js/787.5d7b65c0.chunk.js.map"
+    "main.css": "/Todo/static/css/main.dfd42e3a.css",
+    "main.js": "/Todo/static/js/main.af074cb2.js",
+    "static/js/787.63e47474.chunk.js": "/Todo/static/js/787.63e47474.chunk.js",
+    "index.html": "/Todo/index.html",
+    "main.dfd42e3a.css.map": "/Todo/static/css/main.dfd42e3a.css.map",
+    "main.af074cb2.js.map": "/Todo/static/js/main.af074cb2.js.map",
+    "787.63e47474.chunk.js.map": "/Todo/static/js/787.63e47474.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6da8dc5.css",
-    "static/js/main.41abaf6a.js"
+    "static/css/main.dfd42e3a.css",
+    "static/js/main.af074cb2.js"
   ]
 }

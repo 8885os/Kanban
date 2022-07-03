@@ -61,6 +61,7 @@ td {
     justify-content: center;
     width: 300px;
     text-align: center;
+    padding-bottom: 8px;
 }
 
 tr {
@@ -155,10 +156,10 @@ article {
 
 .side-panel {
     position: fixed;
-    right: -700px;
+    right: -680px;
     top: 405px;
     transform: translateY(-50%);
-    width: 400px;
+    width: 350px;
     height: 620px;
     background-color: rgba(111, 111, 111, 0.4);
     border: 2px solid rgba(189, 187, 187, 0.4);

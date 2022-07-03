@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Table from "./components/Table";
 import AddTask from "./components/AddTask";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { v4 as uuidv4 } from 'uuid';
@@ -10,26 +10,26 @@ import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-    const [tasks, setTasks] = useState([
+    const [tasks, setTasks] = useState(!localStorage.getItem('item') ? [
 
         {
             id: uuidv4(),
-            text: 'Meeting at place',
+            text: 'New Items Are Added Here',
             specify: 'todo',
         },
         {
             id: uuidv4(),
-            text: 'Shopping',
+            text: 'Drag Item Here For In Progress',
             specify: 'inprogress',
 
         },
         {
             id: uuidv4(),
-            text: 'Appointment',
+            text: 'Drag Here When Done',
             specify: 'complete',
 
         },
-    ])
+    ] : JSON.parse(localStorage.getItem('item')))
 
     //Add Task
     const newTask = (text) => {
@@ -42,7 +42,9 @@ function App() {
 
     }
 
-
+    useEffect(() => {
+        localStorage.setItem('item', JSON.stringify(tasks))
+    }, [tasks]);
     //Delete Task
     const deleteTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))

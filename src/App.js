@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { v4 as uuidv4 } from 'uuid';
+import SidePanel from "./components/SidePanel";
 
 
 
@@ -61,6 +62,7 @@ function App() {
                 <div>
                     <AddTask tasks={tasks} onAdd={newTask} />
                 </div>
+                <SidePanel></SidePanel>
             </DndProvider >
         </div>
 

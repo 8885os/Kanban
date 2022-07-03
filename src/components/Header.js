@@ -2,7 +2,7 @@ const Header = () => {
     return (
         <>
             <header className="App-header">
-                <h1>Your Kanban</h1>
+                <h1>Your To Do</h1>
             </header>
         </>
     )

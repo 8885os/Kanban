@@ -1,6 +1,6 @@
 {
-    "name": "kanban",
-    "homepage": "https://8885os.github.io/Kanban",
+    "name": "todo",
+    "homepage": "https://8885os.github.io/Todo",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

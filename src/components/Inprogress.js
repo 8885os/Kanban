@@ -27,6 +27,7 @@ const Inprogress = ({ tasks, onDelete, onDrop }) => {
                     <Article key={filtertask.id} task={filtertask} specify={filtertask.specify} onDelete={onDelete} />
                 ))}
             </div>
+            <div style={{ width: '300px', height: '40px' }}></div>
         </td>
     )
 }

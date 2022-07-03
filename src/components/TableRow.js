@@ -12,7 +12,7 @@ function TableRow({ tasks, onDelete, onDrop }) {
             <Todo tasks={tasks} onDelete={onDelete} onDrop={onDrop}></Todo>
             <Inprogress tasks={tasks} onDelete={onDelete} onDrop={onDrop}></Inprogress>
             <Complete tasks={tasks} onDelete={onDelete} onDrop={onDrop}></Complete>
-        </tr>
+        </tr >
     )
 }
 

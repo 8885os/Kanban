@@ -8,7 +8,7 @@
 
 body {
     height: 100ch;
-    background-image: linear-gradient(to right, #474747, #2a2a2a)
+    background-color: #3b3b3b;
 }
 
 .container {
@@ -79,7 +79,7 @@ article {
     height: 180px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 5px;
+    bottom: -650px;
     justify-content: space-between;
     padding: 20px;
 }
@@ -155,12 +155,11 @@ article {
 
 .side-panel {
     position: fixed;
-    display: flex;
-    right: 10px;
-    top: 50%;
+    right: -700px;
+    top: 405px;
     transform: translateY(-50%);
     width: 400px;
-    height: 700px;
+    height: 620px;
     background-color: rgba(111, 111, 111, 0.4);
     border: 2px solid rgba(189, 187, 187, 0.4);
     padding: 10px;
@@ -185,4 +184,12 @@ li {
     color: rgba(0, 255, 123, 1);
     width: 25px;
     height: 25px;
+}
+
+.making-new {
+    outline: none;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-width: 1px;
 }

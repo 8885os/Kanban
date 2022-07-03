@@ -58,11 +58,9 @@ function App() {
                 <div className="container">
                     <Header />
                     <Table tasks={tasks} onDelete={deleteTask} onDrop={setTasks} />
-                </div>
-                <div>
                     <AddTask tasks={tasks} onAdd={newTask} />
+                    <SidePanel></SidePanel>
                 </div>
-                <SidePanel></SidePanel>
             </DndProvider >
         </div>
 

@@ -34,7 +34,7 @@ function App() {
 
 
     //table state
-    const [tables, setTable] = useState([])
+    const [tables, setTable] = useState(!localStorage.getItem('table') ? [] : JSON.parse(localStorage.getItem('table')))
 
     //Add Task
     const newTask = (text) => {
@@ -50,6 +50,11 @@ function App() {
     useEffect(() => {
         localStorage.setItem('item', JSON.stringify(tasks))
     }, [tasks]);
+
+
+    useEffect(() => {
+        localStorage.setItem('table', JSON.stringify(tables))
+    }, [tables]);
     //Delete Task
     const deleteTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))

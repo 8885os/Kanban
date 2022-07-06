@@ -211,8 +211,31 @@ h3 {
 
 .table-button {
     width: 230px;
+    height: 20px;
     border: 1px solid rgb(0, 0, 0);
     background-color: transparent;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.save-table {
+    color: rgb(160, 215, 240);
+    position: relative;
+    margin-inline-end: 2%;
+    float: right;
+    font-size: 16px;
+
+}
+
+.delete-table {
+    color: red;
+    position: relative;
+    margin-inline-end: 2%;
+    float: right;
+    font-size: 16px;
 }

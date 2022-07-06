@@ -1,13 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-import { RiSave3Fill, RiDeleteBin6Line } from 'react-icons/ri'
+import MapItem from './MapItem'
 
 const Switchtable = ({ tasks, tables, taskSet, deleteTable, setTableHeader, setTable }) => {
 
-    const [currname, setname] = useState('')
+    const [currname] = useState('')
 
-
-    const saveTable = (id, e) => {
+    const saveTable = (id, test) => {
 
         const newstate = tables.map(obj => {
             if (obj.id === id) {
@@ -17,9 +16,15 @@ const Switchtable = ({ tasks, tables, taskSet, deleteTable, setTableHeader, setT
         })
         setTable(newstate)
 
+        test.current.classList.add('flash-save')
+
+        setTimeout(function () {
+            test.current.classList.remove('flash-save');
+        }, 100)
+
     }
 
-    const onClick = ((e) => {
+    const clickItem = ((e) => {
         const setTableTask = tables.filter(item => item.id === e.target.id)
         taskSet(setTableTask[0].tasklist)
         setTableHeader({ header: setTableTask[0].name, id: e.target.id })
@@ -27,12 +32,8 @@ const Switchtable = ({ tasks, tables, taskSet, deleteTable, setTableHeader, setT
 
     return (
         <div className='table-buttons'>
-            {tables.map((tablename) => (
-                <li>
-                    <button className='table-button' onClick={onClick} value={currname} id={tablename.id} key={tablename.id}>
-                        {tablename.name} <RiDeleteBin6Line className='delete-table' onClick={() => deleteTable(tablename.id)} /> <RiSave3Fill className='save-table' onClick={(e) => saveTable(tablename.id, e)} />
-                    </button>
-                </li>
+            {tables.map((item, i) => (
+                <MapItem key={item.id} data={item} deleteTable={deleteTable} saveTable={saveTable} currname={currname} clickItem={clickItem} />
             ))}
 
         </div>

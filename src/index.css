@@ -33,6 +33,7 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
     color: white;
+    font-size: 25px;
 }
 
 table {
@@ -224,7 +225,7 @@ h3 {
 }
 
 .save-table {
-    color: rgb(160, 215, 240);
+    color: rgb(201, 229, 242);
     position: relative;
     margin-inline-end: 2%;
     float: right;
@@ -238,4 +239,28 @@ h3 {
     margin-inline-end: 2%;
     float: right;
     font-size: 16px;
+}
+
+.clear-holder {
+    position: fixed;
+    top: 11%;
+    left: 68%;
+
+}
+
+.clear-button {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    height: 20px;
+    width: 120px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+}
+
+.flash-save {
+    background-color: white;
 }

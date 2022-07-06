@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Table from "./components/Table";
 import AddTask from "./components/AddTask";
+import Clearcurrent from "./components/Clearcurrent";
 import { useState, useEffect } from 'react';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
@@ -35,6 +36,8 @@ function App() {
 
     //table state
     const [tables, setTable] = useState(!localStorage.getItem('table') ? [] : JSON.parse(localStorage.getItem('table')))
+    //table header
+    const [tableheader, setTableHeader] = useState(!localStorage.getItem('header') ? { header: '', id: '' } : JSON.parse(localStorage.getItem('header')))
 
     //Add Task
     const newTask = (text) => {
@@ -44,12 +47,15 @@ function App() {
         setTasks((tasks) => {
             return [...tasks, makeTask]
         });
-
     }
 
     useEffect(() => {
         localStorage.setItem('item', JSON.stringify(tasks))
     }, [tasks]);
+
+    useEffect(() => {
+        localStorage.setItem('header', JSON.stringify(tableheader))
+    }, [tableheader]);
 
 
     useEffect(() => {
@@ -60,16 +66,24 @@ function App() {
         setTasks(tasks.filter((task) => task.id !== id))
     }
 
+    const deleteTable = (id) => {
+        setTable(tables.filter((table) => table.id !== id))
+        if (tables.length === 1) {
+            setTasks([])
+        }
+    }
+
 
     return (
         <div className="App" >
             <DndProvider backend={HTML5Backend}>
                 <div className="container">
-                    <Header />
+                    <Header tableheader={tableheader} />
                     <Table tasks={tasks} onDelete={deleteTask} onDrop={setTasks} />
                     <AddTask tasks={tasks} onAdd={newTask} />
-                    <SidePanel tasks={tasks} taskSet={setTasks} tables={tables} setTable={setTable} />
+                    <SidePanel tasks={tasks} taskSet={setTasks} tables={tables} setTable={setTable} deleteTable={deleteTable} setTableHeader={setTableHeader} />
                 </div>
+                <Clearcurrent setTasks={setTasks} />
             </DndProvider >
         </div>
 

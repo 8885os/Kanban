@@ -1,8 +1,9 @@
-const Header = () => {
+const Header = ({ tableheader }) => {
+
     return (
         <>
             <header className="App-header">
-                <h1>Your To Do List</h1>
+                <h1>{tableheader.header !== '' ? tableheader.header : 'Default Table Name'}</h1>
             </header>
         </>
     )

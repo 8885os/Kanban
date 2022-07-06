@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDrop } from 'react-dnd'
 import Article from './Article'
+
 const Inprogress = ({ tasks, onDelete, onDrop }) => {
 
     const toinprogress = id => {

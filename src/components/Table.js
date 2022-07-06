@@ -2,8 +2,6 @@
 import TableRow from './TableRow'
 
 
-
-
 const Table = ({ tasks, onDelete, onDrop }) => {
 
 

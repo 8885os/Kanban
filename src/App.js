@@ -32,6 +32,10 @@ function App() {
         },
     ] : JSON.parse(localStorage.getItem('item')))
 
+
+    //table state
+    const [tables, setTable] = useState([])
+
     //Add Task
     const newTask = (text) => {
         const id = uuidv4();
@@ -59,7 +63,7 @@ function App() {
                     <Header />
                     <Table tasks={tasks} onDelete={deleteTask} onDrop={setTasks} />
                     <AddTask tasks={tasks} onAdd={newTask} />
-                    <SidePanel></SidePanel>
+                    <SidePanel tasks={tasks} taskSet={setTasks} tables={tables} setTable={setTable} />
                 </div>
             </DndProvider >
         </div>

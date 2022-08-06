@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import '../styles/AddTask.css'
 
 const AddTask = ({ onAdd }) => {
     const [text, setTask] = useState('')
@@ -21,14 +22,16 @@ const AddTask = ({ onAdd }) => {
     }
 
     return (
-        <div id='makingtask'>
-            <textarea id="text" value={text} onChange={(e) =>
-                setTask(e.target.value)} onKeyUp={handleKey}>
+        <div className="makingtask-holder">
+            <div className='makingtask'>
+                <textarea id="text" value={text} onChange={(e) =>
+                    setTask(e.target.value)} onKeyUp={handleKey}>
 
-            </textarea>
-            <button className='btn' onClick={onClick} >
-                Add Task
-            </button>
+                </textarea>
+                <button className='btn' onClick={onClick} >
+                    Add Task
+                </button>
+            </div>
         </div>
     )
 

@@ -1,0 +1,92 @@
+.table-button {
+    width: 230px;
+    height: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.save-table {
+    color: rgb(201, 229, 242);
+    position: relative;
+    margin-inline-end: 2%;
+    float: right;
+    font-size: 16px;
+
+}
+
+.delete-table {
+    color: red;
+    position: relative;
+    margin-inline-end: 2%;
+    float: right;
+    font-size: 16px;
+}
+
+
+.flash-save {
+    opacity: 0.5;
+}
+
+.side-panel {
+    width: 80%;
+    background-color: rgba(111, 111, 111, 0.4);
+    border: 2px solid rgba(189, 187, 187, 0.4);
+    box-shadow: 10px 15px 10px -9px rgba(0, 0, 0, 0.55);
+    padding: 10px;
+    display: flex;
+    height: 100%;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    max-width: 600px;
+
+}
+
+.side-holder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+ol {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    padding: 5px;
+}
+
+.add {
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    cursor: pointer;
+    color: rgba(0, 255, 123, 1);
+    width: 20px;
+    height: 20px;
+}
+
+.making-new {
+    width: 100%;
+    max-width: 200px;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 3px;
+}

@@ -1,12 +1,12 @@
 import Header from "./components/Header";
 import Table from "./components/Table";
 import AddTask from "./components/AddTask";
-import Clearcurrent from "./components/Clearcurrent";
+import ClearCurrent from "./components/ClearCurrent";
 import { useState, useEffect } from 'react';
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd-multi-backend";
+import HTML5toTouch from 'react-dnd-multi-backend/dist/esm/HTML5toTouch';
 import { v4 as uuidv4 } from 'uuid';
-import SidePanel from "./components/SidePanel";
+import SidePanel from './components/SidePanel'
 
 
 
@@ -75,17 +75,17 @@ function App() {
 
 
     return (
-        <div className="App" >
-            <DndProvider backend={HTML5Backend}>
-                <div className="container">
-                    <Header tableheader={tableheader} />
-                    <Table tasks={tasks} onDelete={deleteTask} onDrop={setTasks} />
-                    <AddTask tasks={tasks} onAdd={newTask} />
+        <DndProvider options={HTML5toTouch}>
+            <div className="container" >
+                <Header tableheader={tableheader} />
+                <ClearCurrent setTasks={setTasks} />
+                <div className="table-side-container">
+                    <Table tasks={tasks} onDelete={deleteTask} setTasks={setTasks} deleteTable={deleteTable} setTable={setTable} tables={tables} setTableHeader={setTableHeader} />
                     <SidePanel tasks={tasks} taskSet={setTasks} tables={tables} setTable={setTable} deleteTable={deleteTable} setTableHeader={setTableHeader} />
                 </div>
-                <Clearcurrent setTasks={setTasks} />
-            </DndProvider >
-        </div>
+                <AddTask tasks={tasks} onAdd={newTask} />
+            </div>
+        </DndProvider >
 
     );
 }

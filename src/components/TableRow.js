@@ -2,6 +2,7 @@ import React from 'react'
 import Todo from './Todo'
 import Inprogress from './Inprogress'
 import Complete from './Complete'
+import '../styles/TableRow.css'
 
 function TableRow({ tasks, onDelete, onDrop }) {
 

@@ -1,6 +1,7 @@
 import React from 'react'
+import '../styles/ClearCurrent.css'
 
-const Clearcurrent = ({ setTasks }) => {
+const ClearCurrent = ({ setTasks }) => {
 
     const onClick = () => {
         setTasks([])
@@ -15,4 +16,4 @@ const Clearcurrent = ({ setTasks }) => {
     )
 }
 
-export default Clearcurrent
+export default ClearCurrent

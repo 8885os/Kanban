@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+    min-width: 300px;
+    max-width: 1300px;
+    background-color: white;
+    box-shadow: 10px 15px 10px -9px rgba(0, 0, 0, 0.55);
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 3px;
+}
+
+td {
+    justify-content: center;
+    width: 33.3333333%;
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.table__component {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+
+}

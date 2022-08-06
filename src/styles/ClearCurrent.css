@@ -1,0 +1,19 @@
+.clear-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.clear-button {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    height: 20px;
+    width: 120px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    box-shadow: 10px 15px 10px -9px rgba(0, 0, 0, 0.55);
+
+}

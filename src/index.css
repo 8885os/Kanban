@@ -7,27 +7,23 @@
 }
 
 body {
-    height: 100ch;
+    height: 100vh;
+    width: 100vw;
     background-color: #3b3b3b;
+    overflow-x: hidden;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
 }
 
 .container {
-    width: 300px;
-    height: 100px;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 5%;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-header {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgb(255, 255, 255);
-    margin-bottom: 30px;
-}
 
 h1 {
     font-family: 'Montserrat', sans-serif;
@@ -36,231 +32,29 @@ h1 {
     font-size: 25px;
 }
 
-table {
-
-    width: 500px;
-    transform: translateX(-35%);
-    background-color: white;
-    align-items: flex-start;
+.AppHeader {
+    flex: 0.5;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
+.clear-holder {
+    flex: 0.3;
 }
 
-th {
-    display: flex;
-    min-width: 300px;
+.table-side-container {
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex: 1;
     justify-content: center;
-    padding: 3px;
-}
-
-td {
-    justify-content: center;
-    width: 300px;
-    text-align: center;
-    padding-bottom: 8px;
-}
-
-tr {
-    display: flex;
-    width: auto;
-}
-
-article {
-    height: auto;
-    margin-right: 10px;
-}
-
-#makingtask {
-    position: absolute;
-    width: 600px;
-    height: 180px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -650px;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.btn {
-    width: 120px;
-    display: inline-block;
-    position: relative;
-    background-color: rgb(29, 29, 29);
-    padding: 10px 20px;
-    margin-inline-start: 440px;
-    border-color: white;
-    border-width: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
-    color: white;
-}
-
-.btn:hover {
-    background: rgba(117, 117, 117, 0.7)
-}
-
-#text {
-    position: relative;
-    background-color: rgba(111, 111, 111, 0.4);
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-radius: 12px;
-    border-width: 1px;
-    resize: none;
-    outline: none;
-    position: relative;
-    width: 560px;
-    height: 80px;
-    padding: 5px;
-    color: white;
-}
-
-#todo {
-    background-color: rgba(245, 192, 192, 0.7);
-}
-
-#inprogress {
-    background-color: rgba(239, 192, 98, 0.7);
-}
-
-#complete {
-    background-color: rgba(116, 238, 116, 0.7);
-}
-
-.article {
-    width: 294px;
-    min-height: 40px;
-    border: 2px solid black;
-    margin: 2px;
-    padding: 10px;
-    word-wrap: break-word;
-    overflow: hidden;
-}
-
-.remove {
-    position: relative;
-    margin-inline-start: 0%;
-    float: right;
-}
-
-#tasktext {
-    font-size: 14px;
-}
-
-.side-panel {
-    position: fixed;
-    right: -680px;
-    top: 405px;
-    transform: translateY(-50%);
-    width: 350px;
-    height: 620px;
-    background-color: rgba(111, 111, 111, 0.4);
-    border: 2px solid rgba(189, 187, 187, 0.4);
-    padding: 10px;
-
-}
-
-ol {
-    position: relative;
-    top: 10px;
-    display: inline;
-    list-style-position: inside;
     align-items: center;
-    justify-content: center;
+    gap: 2rem;
 }
 
-li {
-    position: relative;
-    background-color: transparent;
-    display: flex;
-    padding: 5px;
-    left: 10%;
-}
-
-.add {
-    position: relative;
-    left: 10px;
-    float: right;
-    display: flex;
-    cursor: pointer;
-    color: rgba(0, 255, 123, 1);
-    width: 20px;
-    height: 20px;
-}
-
-.making-new {
-    width: 200px;
-    outline: none;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 3px;
+.makingtask {
+    flex: 1;
 }
 
 h3 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-}
-
-.table-button {
-    width: 230px;
-    height: 20px;
-    border: 1px solid rgb(0, 0, 0);
-    background-color: transparent;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    text-align: center;
-
-}
-
-.save-table {
-    color: rgb(201, 229, 242);
-    position: relative;
-    margin-inline-end: 2%;
-    float: right;
-    font-size: 16px;
-
-}
-
-.delete-table {
-    color: red;
-    position: relative;
-    margin-inline-end: 2%;
-    float: right;
-    font-size: 16px;
-}
-
-.clear-holder {
-    position: fixed;
-    top: 11%;
-    left: 68%;
-
-}
-
-.clear-button {
-    border: 1px solid rgb(255, 255, 255);
-    background-color: transparent;
-    height: 20px;
-    width: 120px;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-}
-
-.flash-save {
-    opacity: 0.5;
 }

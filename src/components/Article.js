@@ -1,5 +1,6 @@
 import { CgRemove } from 'react-icons/cg'
 import { useDrag } from 'react-dnd';
+import '../styles/Article.css'
 
 const Article = ({ task, specify, onDelete }) => {
     const [{ isDragging }, drag] = useDrag(() => ({
@@ -16,8 +17,9 @@ const Article = ({ task, specify, onDelete }) => {
         <article className='task' ref={drag} >
             <div className="article" id={specify} style={{ opacity: isDragging ? '0.5' : '1' }}>
                 <p id='tasktext'>
-                    {task.text} <CgRemove className='remove' style={{ color: 'red', cursor: 'pointer' }} onClick={() => onDelete(task.id)} />
+                    {task.text}
                 </p>
+                <CgRemove className='remove' style={{ color: 'red', cursor: 'pointer' }} onClick={() => onDelete(task.id)} />
             </div>
         </article>
     )

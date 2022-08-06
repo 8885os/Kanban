@@ -3,6 +3,7 @@ import { IoMdAdd } from 'react-icons/io'
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import Switchtable from './Switchtable';
+import '../styles/SidePanel.css'
 
 const SidePanel = ({ tasks, taskSet, tables, setTable, deleteTable, setTableHeader }) => {
 
@@ -18,18 +19,20 @@ const SidePanel = ({ tasks, taskSet, tables, setTable, deleteTable, setTableHead
 
     }
     return (
-        <div className='side-panel'>
-            <h3>
-                To Do Tables
-            </h3>
-            <div className='list-holder'>
-                <ol>
-                    <li>
-                        <input className='making-new' onChange={(e) => setName(e.target.value)} value={currname}></input>
-                        <IoMdAdd className='add' onClick={onClick} />
-                    </li>
-                    <Switchtable taskSet={taskSet} tasks={tasks} tables={tables} setTable={setTable} deleteTable={deleteTable} setTableHeader={setTableHeader} ></Switchtable>
-                </ol>
+        <div className='side-holder'>
+            <div className='side-panel'>
+                <h3>
+                    To Do Tables
+                </h3>
+                <div className='list-holder'>
+                    <ol>
+                        <li>
+                            <input className='making-new' onChange={(e) => setName(e.target.value)} value={currname}></input>
+                            <IoMdAdd className='add' onClick={onClick} />
+                        </li>
+                        <Switchtable taskSet={taskSet} tasks={tasks} tables={tables} setTable={setTable} deleteTable={deleteTable} setTableHeader={setTableHeader} ></Switchtable>
+                    </ol>
+                </div>
             </div>
         </div>
     )

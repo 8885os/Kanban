@@ -1,11 +1,13 @@
+import '../styles/Header.css'
+
 const Header = ({ tableheader }) => {
 
     return (
-        <>
-            <header className="App-header">
+        <div className="AppHeader">
+            <header>
                 <h1>{tableheader.header !== '' ? tableheader.header : 'Default Table Name'}</h1>
             </header>
-        </>
+        </div>
     )
 }
 

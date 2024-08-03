@@ -1,7 +1,7 @@
 .table-button {
     width: 230px;
     height: 20px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     border-radius: 3px;
     cursor: pointer;
@@ -9,6 +9,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-align: center;
+    color: white;
 
 }
 
@@ -87,6 +88,7 @@ li {
     outline: none;
     border-radius: 5px;
     background-color: transparent;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255,255,255);
     padding: 3px;
+    color: white;
 }
